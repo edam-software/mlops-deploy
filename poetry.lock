@@ -449,6 +449,18 @@ test = ["pytest (>=6.2.0)", "pytest-benchmark", "pytest-cov", "pytest-xdist", "p
 test-randomorder = ["pytest-randomly"]
 
 [[package]]
+name = "cycler"
+version = "0.12.1"
+description = "Composable style cycles"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["ipython", "matplotlib", "numpydoc", "sphinx"]
+tests = ["pytest", "pytest-cov", "pytest-xdist"]
+
+[[package]]
 name = "debugpy"
 version = "1.6.7"
 description = "An implementation of the Debug Adapter Protocol for Python"
@@ -1425,6 +1437,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "kiwisolver"
+version = "1.4.5"
+description = "A fast implementation of the Cassowary constraint solver"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "kombu"
 version = "5.3.3"
 description = "Messaging library for Python."
@@ -1481,6 +1501,22 @@ description = "Safely add untrusted strings to HTML/XML markup."
 category = "main"
 optional = false
 python-versions = ">=3.7"
+
+[[package]]
+name = "matplotlib"
+version = "3.4.3"
+description = "Python plotting package"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+cycler = ">=0.10"
+kiwisolver = ">=1.0.1"
+numpy = ">=1.16"
+pillow = ">=6.2.0"
+pyparsing = ">=2.2.1"
+python-dateutil = ">=2.7"
 
 [[package]]
 name = "matplotlib-inline"
@@ -1831,6 +1867,18 @@ description = "Tiny 'shelve'-like database with concurrency support"
 category = "main"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "pillow"
+version = "10.1.0"
+description = "Python Imaging Library (Fork)"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-inline-tabs", "sphinx-removed-in", "sphinxext-opengraph"]
+tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
 
 [[package]]
 name = "platformdirs"
@@ -2278,6 +2326,20 @@ dev = ["pytest (==7.2.0)", "pytest-sugar (==0.9.5)", "pytest-cov (==3.0.0)", "py
 tests = ["pytest (==7.2.0)", "pytest-sugar (==0.9.5)", "pytest-cov (==3.0.0)", "pytest-mock (==3.8.2)", "pylint (==2.15.0)", "mypy (==0.971)", "pytest-test-utils (==0.0.8)", "pytest-asyncio (==0.18.3)", "mock (==5.1.0)", "paramiko (==3.3.1)", "types-certifi (==2021.10.8.3)", "types-mock (==5.1.0.2)", "types-paramiko (==3.3.0.0)", "pytest-docker (==0.12.0)"]
 
 [[package]]
+name = "seaborn"
+version = "0.11.2"
+description = "seaborn: statistical data visualization"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+matplotlib = ">=2.2"
+numpy = ">=1.15"
+pandas = ">=0.23"
+scipy = ">=1.0"
+
+[[package]]
 name = "semver"
 version = "3.0.2"
 description = "Python helper for Semantic Versioning (https://semver.org)"
@@ -2628,7 +2690,7 @@ test = ["zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.11"
-content-hash = "9cdf496d2b387da56a48f210dab92437d50e47819bbc496f2f7a62c1e0a992b0"
+content-hash = "b99d50443023c59cc3186cd63645125b68e6ed8d2306f3469f2cb7ca432fcfee"
 
 [metadata.files]
 aiohttp = []
@@ -2665,6 +2727,7 @@ colorama = []
 comm = []
 configobj = []
 cryptography = []
+cycler = []
 debugpy = []
 decorator = []
 defusedxml = []
@@ -2726,9 +2789,11 @@ jupyter-server = []
 jupyter-server-terminals = []
 jupyterlab-pygments = []
 jupyterlab-widgets = []
+kiwisolver = []
 kombu = []
 markdown-it-py = []
 markupsafe = []
+matplotlib = []
 matplotlib-inline = []
 mdurl = []
 mistune = []
@@ -2753,6 +2818,7 @@ parso = []
 pathspec = []
 pexpect = []
 pickleshare = []
+pillow = []
 platformdirs = []
 prometheus-client = []
 prompt-toolkit = []
@@ -2828,6 +2894,7 @@ rsa = []
 scikit-learn = []
 scipy = []
 scmrepo = []
+seaborn = []
 semver = []
 send2trash = []
 shortuuid = []
